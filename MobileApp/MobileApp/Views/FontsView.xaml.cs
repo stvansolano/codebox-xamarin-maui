@@ -48,6 +48,7 @@ namespace MobileApp.Views
 			var fonts = new List<FontItem> {
 				new FontItem { FontFamilyName = new Label().FontFamily },
 				new FontItem { FontFamilyName = "Lobster" },
+				new FontItem { FontFamilyName = "ArchitectsDaughter" },
 			};
 
 			return fonts;
