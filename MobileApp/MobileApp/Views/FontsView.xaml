@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MobileApp.Views.FontsView"
+    x:Name="Root"
+    BindingContext="{x:Reference Root}"
+    Title="Font families">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Margin="10">
+            <Label Margin="0,60,0,0" Text="Font families" />
+            <RefreshView IsRefreshing="{Binding IsBusy}">
+                <CollectionView Margin="20,10,20,0"
+                            ItemSizingStrategy="MeasureAllItems"
+                            ItemsSource="{Binding FontFamilies}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BorderColor="LightGray" Margin="1,1,0,0.5" HasShadow="False">
+                                    <Label Text="{Binding FontFamilyName}" FontFamily="{Binding FontFamilyName}" />
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                </CollectionView>
+        
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
