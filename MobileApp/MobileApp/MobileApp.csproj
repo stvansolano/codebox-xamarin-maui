@@ -17,5 +17,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Fonts\Lobster-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\ArchitectsDaughter-Regular.ttf" />
   </ItemGroup>
 </Project>
